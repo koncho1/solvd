@@ -3,9 +3,13 @@ public class Bus extends Vehicle {
     private int weight;
 
     public Bus(int numberOfWheels, int numberOfDoors, int numberOfSeats, int weight) {
-        super(numberOfWheels, numberOfDoors);
         this.numberOfSeats = numberOfSeats;
         this.weight = weight;
+    }
+
+    @Override
+    public void Ride() {
+        System.out.println("vroom");
     }
 
     public int getNumberOfSeats() {

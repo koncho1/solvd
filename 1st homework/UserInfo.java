@@ -1,5 +1,5 @@
-#javac UserInfo.java
-#java UserInfo arg1 arg2 ...
+//javac UserInfo.java
+//java UserInfo arg1 arg2 ...
 
 class UserInfo {
     public static void main(String[] args) {

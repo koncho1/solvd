@@ -1,16 +1,12 @@
-public class Vehicle {
-    private int numberOfWheels;
-    private int numberOfDoors;
+public abstract class Vehicle {
+    protected int numberOfWheels;
+    protected int numberOfDoors;
 
-    private Engine engine;
-    private Radiator radiator;
+    protected Engine engine;
+    protected Radiator radiator;
 
-    public Vehicle(int numberOfWheels, int numberOfDoors, Engine engine, Radiator radiator) {
-        this.numberOfWheels = numberOfWheels;
-        this.numberOfDoors = numberOfDoors;
-        this.engine = engine;
-        this.radiator = radiator;
-    }
+    public  abstract void Ride();
+
 
     public Engine getEngine() {
         return engine;
@@ -30,14 +26,6 @@ public class Vehicle {
 
     public int getNumberOfWheels() {
         return numberOfWheels;
-    }
-
-    public Vehicle() {
-    }
-
-    public Vehicle(int numberOfWheels, int numberOfDoors) {
-        this.numberOfWheels = numberOfWheels;
-        this.numberOfDoors = numberOfDoors;
     }
 
     public void setNumberOfWheels(int numberOfWheels) {

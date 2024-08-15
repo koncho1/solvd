@@ -1,13 +1,18 @@
+import java.util.Objects;
+
 public class Truck extends Vehicle {
     private int capacity;
 
     public Truck(int numberOfWheels, int numberOfDoors, Engine engine, Radiator radiator, int capacity) {
-        super(numberOfWheels, numberOfDoors, engine, radiator);
         this.capacity = capacity;
     }
 
+    @Override
+    public void Ride() {
+        System.out.println("vrr");
+    }
+
     public Truck(int numberOfWheels, int numberOfDoors) {
-        super(numberOfWheels, numberOfDoors);
     }
 
     public int getCapacity() {
@@ -16,5 +21,30 @@ public class Truck extends Vehicle {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Truck truck = (Truck) o;
+        return capacity == truck.capacity;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(capacity);
+    }
+
+    @Override
+    public String toString() {
+        return "Truck{" +
+                "capacity=" + capacity +
+                ", numberOfWheels=" + numberOfWheels +
+                ", numberOfDoors=" + numberOfDoors +
+                ", engine=" + engine +
+                ", radiator=" + radiator +
+                '}';
     }
 }
