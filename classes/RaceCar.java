@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class RaceCar extends Vehicle{
+public class RaceCar extends Vehicle implements ICheckEngine,IChangeTire{
     private int topSpeed;
 
 
@@ -32,6 +32,10 @@ public class RaceCar extends Vehicle{
 
     }
 
+    public boolean CheckEngine(){
+        return true;
+    }
+
     public RaceCar(int numberOfWheels, int numberOfDoors, int topSpeed) {
         this.topSpeed = topSpeed;
     }
@@ -42,5 +46,10 @@ public class RaceCar extends Vehicle{
 
     public void setTopSpeed(int topSpeed) {
         this.topSpeed = topSpeed;
+    }
+
+    @Override
+    public void ChangeTire() {
+        System.out.println("Tire changed");
     }
 }

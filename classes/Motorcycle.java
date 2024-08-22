@@ -1,7 +1,8 @@
 import java.util.Objects;
 
-public class Motorcycle extends Vehicle {
+public final class Motorcycle extends Vehicle {
     private int topSpeed;
+    private final String fuelType="Petrol";
 
     public int getTopSpeed() {
         return topSpeed;
@@ -35,6 +36,8 @@ public class Motorcycle extends Vehicle {
     public void Ride() {
         System.out.println("vroom vroom");
     }
+
+
 
     public Motorcycle(int numberOfWheels, int numberOfDoors, Engine engine, Radiator radiator, int topSpeed) {
         this.topSpeed = topSpeed;

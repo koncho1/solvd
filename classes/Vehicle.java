@@ -7,6 +7,10 @@ public abstract class Vehicle {
 
     public  abstract void Ride();
 
+    static {
+        System.out.println("Static block");
+    }
+
 
     public Engine getEngine() {
         return engine;

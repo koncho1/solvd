@@ -7,6 +7,7 @@ public class Main {
         Bus bus=new Bus(6,2,40,10000);
         Motorcycle motorcycle=new Motorcycle(2,0,engine,radiator,300);
         Truck truck=new Truck(10,2,truckEngine,radiator,6000);
+        System.out.println(Bus.getNumberOfBusses());
 
     }
 }

@@ -1,11 +1,22 @@
-public class Bus extends Vehicle {
+public class Bus extends Vehicle implements IHonk {
     private int numberOfSeats;
     private int weight;
+
+    private static int numberOfBusses=0;
 
     public Bus(int numberOfWheels, int numberOfDoors, int numberOfSeats, int weight) {
         this.numberOfSeats = numberOfSeats;
         this.weight = weight;
+        addBus();
     }
+
+    public static int getNumberOfBusses() {
+        return numberOfBusses;
+    }
+
+    private  void addBus(){
+            numberOfBusses+=1;
+        }
 
     @Override
     public void Ride() {
@@ -26,5 +37,10 @@ public class Bus extends Vehicle {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public String Honk() {
+        return "Honk Honk!";
     }
 }

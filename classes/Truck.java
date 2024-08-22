@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Truck extends Vehicle {
+public class Truck extends Vehicle implements ILoad,IAlarm {
     private int capacity;
 
     public Truck(int numberOfWheels, int numberOfDoors, Engine engine, Radiator radiator, int capacity) {
@@ -33,8 +33,21 @@ public class Truck extends Vehicle {
     }
 
     @Override
+    public void Load() {
+        System.out.println("Loaded");
+    }
+
+    public void Unload(){
+        System.out.println("unloaded");
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hashCode(capacity);
+    }
+
+    public final void loadPackage(){
+        System.out.println("Load cargo on the truck");
     }
 
     @Override
