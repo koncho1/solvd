@@ -1,6 +1,11 @@
+package classes;
+
+import interfaces.IAlarm;
+import interfaces.ILoad;
+
 import java.util.Objects;
 
-public class Truck extends Vehicle implements ILoad,IAlarm {
+public class Truck extends Vehicle implements ILoad, IAlarm {
     private int capacity;
 
     public Truck(int numberOfWheels, int numberOfDoors, Engine engine, Radiator radiator, int capacity) {
@@ -52,7 +57,7 @@ public class Truck extends Vehicle implements ILoad,IAlarm {
 
     @Override
     public String toString() {
-        return "Truck{" +
+        return "classes.Truck{" +
                 "capacity=" + capacity +
                 ", numberOfWheels=" + numberOfWheels +
                 ", numberOfDoors=" + numberOfDoors +

@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.Objects;
 
 public final class Motorcycle extends Vehicle {
@@ -10,7 +12,7 @@ public final class Motorcycle extends Vehicle {
 
     @Override
     public String toString() {
-        return "Motorcycle{" +
+        return "classes.Motorcycle{" +
                 "topSpeed=" + topSpeed +
                 ", numberOfWheels=" + numberOfWheels +
                 ", numberOfDoors=" + numberOfDoors +

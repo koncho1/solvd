@@ -1,3 +1,5 @@
+package interfaces;
+
 public interface IAlarm {
     default String AlarmOn(){
         return "Alarm is on";

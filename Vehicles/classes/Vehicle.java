@@ -1,3 +1,5 @@
+package classes;
+
 public abstract class Vehicle {
     protected int numberOfWheels;
     protected int numberOfDoors;

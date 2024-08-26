@@ -1,12 +1,18 @@
+package classes;
+
+import exceptions.NoTopSpeedException;
+import interfaces.IChangeTire;
+import interfaces.ICheckEngine;
+
 import java.util.Objects;
 
-public class RaceCar extends Vehicle implements ICheckEngine,IChangeTire{
+public class RaceCar extends Vehicle implements ICheckEngine, IChangeTire {
     private int topSpeed;
 
 
     @Override
     public String toString() {
-        return "RaceCar{" +
+        return "classes.RaceCar{" +
                 "topSpeed=" + topSpeed +
                 ", numberOfWheels=" + numberOfWheels +
                 ", numberOfDoors=" + numberOfDoors +
@@ -36,8 +42,12 @@ public class RaceCar extends Vehicle implements ICheckEngine,IChangeTire{
         return true;
     }
 
-    public RaceCar(int numberOfWheels, int numberOfDoors, int topSpeed) {
+    public RaceCar(int numberOfWheels, int numberOfDoors, int topSpeed) throws NoTopSpeedException {
+
         this.topSpeed = topSpeed;
+        if(this.topSpeed<=0){
+            throw new NoTopSpeedException("Top speed should be higher than 0");
+        }
     }
 
     public int getTopSpeed() {

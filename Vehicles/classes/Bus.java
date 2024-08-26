@@ -1,13 +1,22 @@
+package classes;
+
+import classes.Vehicle;
+import exceptions.NoWheelsException;
+import interfaces.IHonk;
+
 public class Bus extends Vehicle implements IHonk {
     private int numberOfSeats;
     private int weight;
 
     private static int numberOfBusses=0;
 
-    public Bus(int numberOfWheels, int numberOfDoors, int numberOfSeats, int weight) {
+    public Bus(int numberOfWheels, int numberOfDoors, int numberOfSeats, int weight) throws NoWheelsException {
         this.numberOfSeats = numberOfSeats;
         this.weight = weight;
         addBus();
+        if(this.numberOfWheels<0){
+            throw new NoWheelsException("Incorrect number of wheels");
+        }
     }
 
     public static int getNumberOfBusses() {
